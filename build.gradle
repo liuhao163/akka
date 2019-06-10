@@ -1,0 +1,30 @@
+group 'com.ericliu.'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+
+dependencies {
+    compile group: 'com.typesafe.akka', name: 'akka-actor_2.12', version: '2.5.23'
+    compile group: 'com.typesafe.akka', name: 'akka-http_2.12', version:'10.1.8'
+    compile group: 'com.typesafe.akka', name: 'akka-cluster_2.12', version: '2.5.23'
+}
